@@ -7,6 +7,8 @@
 
 Every long-running agent session ends the same way: the context window fills, and everything the agent understood — decisions, constraints, the read of the person it worked with — dies with it. The transcript survives; the understanding doesn't. The companion paper (*Session-Boundary Distillation* — published at [veres.global/session-boundary-distillation](https://veres.global/session-boundary-distillation), copy bundled in [evidence/](evidence/)) names the primitive for keeping it — and documents it running in production for months, including a live failure and its fix. The paper is the evidence the primitive works; this protocol is the primitive applied at the succession scale.
 
+What crosses the boundary is the **golden context** — the distilled model of the project (what's being built and why, the decisions and their reasons, the constraints and learned rules, the read of the person) — crystallized by the one mind that lived it, while it's still sharp. That model gains resolution across agents instead of resetting with each one. Everything else in this document is the machinery that moves it safely.
+
 Supervised succession extends that primitive with one new thing: the **overlap window**. The outgoing agent (the *elder*) doesn't die and leave a letter. It stays alive on its residual context and spends it on exactly one job — **watching the incoming agent (the *successor*) interpret the handoff, and correcting it live**. An apprenticeship, not an inbox.
 
 What the overlap solves:

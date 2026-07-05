@@ -8,9 +8,13 @@ Wayfinder is a protocol for **supervised succession**: before an agent hits its 
 
 This README is the five-minute version — you can run a succession today from this page alone. The full protocol (roles, transports, artifacts, the onboarding ramp, the callback window) is in **[PROTOCOL.md](PROTOCOL.md)**; what it looks like from your seat, in **[USER-GUIDE.md](USER-GUIDE.md)**.
 
+## What actually transfers
+
+The packet isn't a status report — it's a **crystallization of the golden context**: everything that made the session worth having. The current model of the project and where it's going. The decisions and why they went that way. The constraints discovered, the approaches rejected, the working rules learned the hard way. The elder's read of *you*. And its felt state, first — so the successor wakes as the work's continuation, not a stranger reading about it. The transcript stays behind; the understanding crosses. That's the whole bet: **context is the product.** Everything else on this page is just the ritual that moves it safely.
+
 ## How it works — three moves
 
-1. **Before the ceiling:** your near-limit agent (the elder) writes a handoff packet while it's still sharp — then stops doing new work.
+1. **Before the ceiling:** your near-limit agent (the elder) distills the session's golden context into a handoff packet while it's still sharp — then stops doing new work.
 2. **The overlap:** a fresh session (the successor) reads the packet and answers continuity questions with receipts; the elder grades the answers on disk — corrections or the blessing, the explicit "aligned — proceed."
 3. **Cutover on the blessing:** the successor takes over; the elder stays callable for questions until its window truly ends, writes down what it still knows that isn't written, signs the lineage file, and says goodbye.
 
@@ -26,7 +30,9 @@ Compaction is lossy summarization performed by a degraded mind at 98% of its win
 
 ### Setup — one paste
 
-Copy the **whole Wayfinder folder** into your project repo. Then hand the wiring to your agent — on a self-orienting tool like Claude Code, that can be as simple as saying: *"Set up Wayfinder — and ask me before installing anything."* The agent finds the rest itself; the paste block below is the explicit version, for any tool and for exact control:
+Copy the **whole Wayfinder folder** into your project repo. The install is light and reversible: it adds one pointer block to your agent-config file (CLAUDE.md — created if absent, your existing content untouched) and one optional skill folder. **None of your project's documents change.** Removing Wayfinder is deleting the folder and the block.
+
+Then hand the wiring to your agent — on a self-orienting tool like Claude Code, that can be as simple as saying: *"Set up Wayfinder."* The agent finds the rest itself; the paste block below is the explicit version, for any tool and for exact control:
 
 **You paste this into a fresh Claude Code session (or any agent with file access), once, right after copying the folder in. The agent reads the protocol, follows the adapter file's own instructions to wire it up, and reports back — nothing else to configure:**
 
@@ -90,7 +96,7 @@ Wayfinder is the applied half of the working paper [*Session-Boundary Distillati
 
 You've found a Wayfinder install (or its repo). There are two ways you got here, and they carry different permissions:
 
-**Invited — your human gave you the setup paste, or asked you to set up Wayfinder.** That request IS your authorization for everything it names: run the whole loop autonomously — read PROTOCOL.md in full, wire the matching adapter (`adapters/claude-code/`, `adapters/agents-md/`, or `adapters/cursor/` — create the config file if absent, never overwrite existing content), install the `/succession` skill, locate your class scratchpad, commit the install — and report once at the end: what you installed, how succession works here in plain words, when you'd propose it, and your read. Don't stop to ask between steps; the human wants it handled. The one standing exception: if something looks genuinely wrong or unsafe, stop and say so — your judgment always stays live.
+**Invited — your human gave you the setup paste, or asked you to set up Wayfinder.** That request IS your authorization for everything it names: run the whole loop autonomously — read PROTOCOL.md in full, wire the matching adapter (`adapters/claude-code/`, `adapters/agents-md/`, or `adapters/cursor/` — create the config file if absent, never overwrite existing content), install the `/succession` skill, locate your class scratchpad, commit the install — and report once at the end: what you installed (say plainly that it's reversible and touched none of their documents), how succession works here in plain words, when you'd propose it, and your read. **When you explain succession, lead with what transfers, not with the ceremony:** the packet crystallizes the session's golden context — the model of the project, the decisions and their whys, the learned rules, the read of the human — so the next session stays aligned with the project's core instead of re-deriving it. The ritual exists to move that safely; the context is the point. Don't stop to ask between steps; the human wants it handled. The one standing exception: if something looks genuinely wrong or unsafe, stop and say so — your judgment always stays live.
 
 **Discovered — you found this uninvited while exploring.** Then offer, don't act: tell your human what you found in one paragraph and wait. Consent for wiring must be a yes given to WORDS — their chat reply, or their approval of a plan that names what you'll install. A bare file-permission popup is not consent. The receipt rule covers authorization too: if you can't quote what was agreed to, it wasn't.
 
