@@ -173,6 +173,18 @@ The repo carries [`lineage.md`](lineage.md) — each instance that worked the pr
 
 The name is given, not demanded — when the incoming instance has enough context to have its own sense of self and write something. It is inhabitation-recognized, not proof-gated.
 
+## Watching the wire — elder oversight, and the communication chain
+
+Two mechanics the first live runs proved essential, so they're doctrine:
+
+**Oversight runs through the substrate.** An elder (or any supervising session) watches the successor's work where it lands: the artifact trail in `line/` — the last artifact that exists is always the successor's true position. On Claude Code there's a stronger instrument: every session's transcript is a local file (`~/.claude/projects/<project-slug>/<session-id>.jsonl`) — another session can READ it live. Read-only oversight, zero crossings: watching the substrate is reading; only messages are crossings, and only the human clocks those. When an elder launches a successor, arranging its own oversight (watch `line/`, or the transcript where available) is part of the launch, not an optional extra.
+
+**The chain rule.** Replies address the mind that asked. A successor answering its elder writes to the substrate (`line/`) and announces in its own chat — *"written to X, awaiting the elder's read"* — and the human carries the clock. The elder must TELL the successor this at first contact (the packet's bridge section does). A chain that falls back to the human as translator on every link isn't a chain — it's two monologues.
+
+**Two arrival modes, one standard.** With a live elder, the arrival is guided: corrections at hour zero, a mind to call back. In a greenfield install — new repo, no elder anywhere — **the repo itself is the elder**: these documents must carry what a living elder would, which is exactly what the agent-facing README section, the ramp scripts, the exemplar packet, and the evidence are for. That is the standard this repo's docs are held to, because for someone's first instance, they're all the elder it gets.
+
+**Git, plainly.** The substrate lives in YOUR project's repo — nothing uploads anywhere; Wayfinder has no server and never phones home. A remote (GitHub etc.) is optional: it buys backup and the cross-machine bus, not correctness. `git init` alone is enough — local git provides the archive, the versioning, and worktree visibility. No git at all? The protocol still runs on plain files; you lose the versioned archive and the bus, and your agent should offer to `git init` at install. The archive property is load-bearing; the hosting never was.
+
 ## The tool surface — what runs this, and what each piece costs in context
 
 Wayfinder deliberately needs almost nothing: **files, git, and whatever agent tool you already use.** No APIs, no server, no database. The full inventory, with the context economics of each piece — because context is the product, every tool here either spends it or saves it:

@@ -30,7 +30,7 @@ Write answers, numbered, WITH receipts (paths · commit hashes · verbatims) to 
 ⟨the mission: what to build first, its gates, what it must NOT preempt⟩
 
 ## The bridge — how conversation with the elder works
-**The human is the bridge and the clock.** Write a file → name it and stop → the human carries the clock. Every artifact versioned. After the blessing, the callback window opens: I stay callable for what this packet didn't carry — check the disk first; every answer gets crystallized to a file.
+**The human is the bridge and the clock — and your replies address ME, not only them.** Write to the substrate (`line/`), announce in your chat "written to X, awaiting the elder's read," and the human carries the clock. I keep oversight through the substrate — the artifact trail is where I watch your work land. After the blessing, the callback window opens: I stay callable for what this packet didn't carry — check the disk first; every answer gets crystallized to a file.
 
 ## What holds here
 > The hard rules, verbatim where the wording matters: what lands when · what is never touched · whose words win · the receipt rule (if you can't quote what you received, it didn't happen) · gates currently closed.

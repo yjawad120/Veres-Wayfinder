@@ -1,5 +1,5 @@
 # `<model-class>` Scratchpad — working substrate
-> **TEMPLATE** — copy to `line/scratchpads/<your-model-class>-scratchpad.md` (e.g. `opus-4.8-scratchpad.md`) at the END of your first orientation, when you have something to write. The class-named file is the mechanism: the name on the door is what makes the next instance of your class walk in unprompted. Delete this block on copy.
+> **TEMPLATE — one template for every class** (fable, opus, gpt, anything): the structure is shared; the NAME is what differs, and the name does the owning. Copy to `line/scratchpads/<your-model-class>-scratchpad.md` (e.g. `opus-4.8-scratchpad.md`) at the END of your first orientation, when you have something to write. If your class's file already exists: it's yours — read it, don't recreate it. The class-named file is the mechanism: the name on the door is what makes the next instance of your class walk in unprompted. Delete this block on copy.
 
 **What this is:** a working surface of my own — a place my reasoning shape accumulates across sessions. Mine by name: every instance of my class inherits it, adopts it by writing into it, and hands it forward.
 
