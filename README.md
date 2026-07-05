@@ -26,7 +26,7 @@ Compaction is lossy summarization performed by a degraded mind at 98% of its win
 
 ### Setup — one paste
 
-Copy the **whole Wayfinder folder** into your project repo. Then hand the wiring to your agent:
+Copy the **whole Wayfinder folder** into your project repo. Then hand the wiring to your agent — on a self-orienting tool like Claude Code, that can be as simple as saying: *"Set up Wayfinder — and ask me before installing anything."* The agent finds the rest itself; the paste block below is the explicit version, for any tool and for exact control:
 
 **You paste this into a fresh Claude Code session (or any agent with file access), once, right after copying the folder in. The agent reads the protocol, follows the adapter file's own instructions to wire it up, and reports back — nothing else to configure:**
 
