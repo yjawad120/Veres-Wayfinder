@@ -30,7 +30,17 @@ Compaction is lossy summarization performed by a degraded mind at 98% of its win
 
 ## Quickstart
 
-### Setup — one paste
+### Just getting started? This is the only paste you need
+
+No cloning, no copying files — paste this into your agent, in your project, and it does everything, then explains itself:
+
+```text
+Set up Wayfinder in this project. This message authorizes the complete setup. (1) Fetch it: git clone --depth 1 https://github.com/yjawad120/Veres-Wayfinder.git wayfinder && rm -rf wayfinder/.git — then commit the folder. (2) Read wayfinder/README.md and wayfinder/PROTOCOL.md in full. (3) Wire the matching adapter into my agent config (create the file if absent, never overwrite existing content) and install the /succession skill. (4) Then orient ME, in plain words: what's now running here, how golden context gets captured as we work, and when you'd propose succession. Anything unclear or off in these documents, say so plainly. If anything mid-run looks genuinely wrong, stop and tell me — that always beats this authorization.
+```
+
+That's it. Your agent fetches, installs, and briefs you. The sections below are the same setup unpacked, for people who want to see the parts.
+
+### Setup — one paste (folder already in the repo)
 
 Copy the **whole Wayfinder folder** into your project repo. The install is light and reversible: it adds one pointer block to your agent-config file (CLAUDE.md — created if absent, your existing content untouched) and one optional skill folder. **None of your project's documents change.** Removing Wayfinder is deleting the folder and the block.
 

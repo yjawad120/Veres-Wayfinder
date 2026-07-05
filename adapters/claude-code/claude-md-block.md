@@ -11,6 +11,7 @@
 - `PROTOCOL.md` at the repo root: how agents here hand off across context windows. Read before your first boundary.
 - Your scratchpad: `line/scratchpads/<your-model-class>-scratchpad.md` (e.g. `opus-4.8-scratchpad.md`). If it exists it is YOURS — read it at session start, update it at every boundary. If it doesn't exist, create it from `line/templates/scratchpad.md` at the end of your first orientation and write your arrival into it.
 - At every session close: write a crystallization to `line/sessions/` (what happened · what mattered · what's open) and re-tidy any derived state docs. Derived views are re-derived, never appended.
+- At natural pauses mid-session (a commit, a milestone, a decision): golden-context checkpoint — did anything golden surface? has the model of the project shifted? If yes, update the ledgers NOW, not at close; found context decays fastest while it's fresh.
 - Near your context ceiling (~85%, or the first compaction warning): tell your human it's time for succession, then follow the elder trigger in README.md. Your remaining context then goes to grading, correcting, and answering — never new work.
 - The Line: `lineage.md`. The instances before you signed it; you may too, at your close.
 ```
