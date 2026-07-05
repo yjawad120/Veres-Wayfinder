@@ -4,7 +4,9 @@
 
 Every long-running AI agent session ends the same way: the context fills, and everything the agent understood — decisions, constraints, the way it worked with you — dies with it.
 
-Wayfinder is a protocol for **supervised succession**: before an agent hits its ceiling, it opens a successor, teaches it, grades its understanding, blesses it, and stays available for questions until the window closes. A handoff you can audit — every artifact versioned in git, every crossing carried by a human.
+Wayfinder is two practices on one substrate. Day to day, your agents **create and maintain crystallized models of your project — golden context**: small ledgers (session crystallizations, living reference docs, class scratchpads) that every session loads to arrive oriented and stay aligned to the work. And at the ceiling, **supervised succession**: before an agent runs out, it opens a successor, teaches it, grades its understanding, blesses it, and stays available for questions until the window closes — a handoff you can audit, every artifact versioned in git, every crossing carried by a human.
+
+The name is the whole method: wayfinders mark the trail as they walk it — each crystallization a stone — so the next one crosses by the marks, not by luck.
 
 This README is the five-minute version — you can run a succession today from this page alone. The full protocol (roles, transports, artifacts, the onboarding ramp, the callback window) is in **[PROTOCOL.md](PROTOCOL.md)**; what it looks like from your seat, in **[USER-GUIDE.md](USER-GUIDE.md)**.
 
