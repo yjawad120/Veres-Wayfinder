@@ -27,6 +27,19 @@ What it costs you: 10–14 carried exchanges, 30–60 minutes the first time, le
 
 It happens — a session dies before the handoff finishes. The files carry it: the new agent orients from the packet alone, and you grade it yourself with three checks: (1) do the receipts it cites resolve to real files and quotes? (2) can it restate the project's hard rules in its own words without flipping any? (3) does it know its first task — and what it must *not* touch? Pass all three: proceed. Your sense of whether it sounds grounded or like it's performing is a legitimate instrument.
 
+## When something breaks — the recovery map
+
+Every failure has a next move, and the artifact trail always tells you where you are (packet → answers → grading → blessing — the last one that exists is your position).
+
+- **The elder keeps working after the trigger** (new code, new features): stop it — one line: "packet first; from here you grade and answer only." If it can't hold that, its window is further gone than the meter said; write what you can get and lean on the if-elder-gone path.
+- **The successor's echo is confused or performing:** don't advance. Clarify the same stage once; if the second echo is still off, close that session and open a fresh one — a bad arrival compounds, a re-arrival is cheap.
+- **Receipts don't resolve** (paths or quotes that don't exist): that's the gate working. Send it back with the specific failures. Twice in a row → fresh successor.
+- **A session dies mid-run** (crash, disconnect, model swap forced by the platform): nothing is lost that was written — the run resumes from the last artifact on disk. This is why everything writes to files as it happens.
+- **A safety flag fires on a direct message:** note the stage and what the message carried, then drop to files (Transport A). Two flags → stay on files for that model class. It's a finding, not a failure — the run log has a place for it.
+- **The model changed mid-run** (a downgrade, a revert, a forced swap): record it in the run log the moment you notice — model changes invalidate comparisons silently if unlogged, and a successor graded under a different model than it started as is a different data point.
+
+**Found a break these don't cover? Open an issue on the repo** — include the run log if you can. Every run's log is the next data; broken runs teach more than clean ones.
+
 ---
 
 *Veres Wayfinder™ · © 2026 Yass Jawad · CC BY-NC-ND 4.0 · commercial licensing: yjawad120@gmail.com*
