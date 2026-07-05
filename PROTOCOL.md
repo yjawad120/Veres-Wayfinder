@@ -35,7 +35,7 @@ When the elder's context approaches ~85%, the ritual fires. Today the noticing i
 
 The protocol has one shape and two implementations, and a clear default: **automate what your platform permits; fall back to the human hand.**
 
-**Transport B — direct messaging (the DEFAULT where the model class and platform permit).** The succession is agent-to-agent: elder and successor exchange directly, each delivery confirmed by the human. Messages carry addresses and gate-talk; the substrate carries the content. Be clear-eyed about the asymmetry: the default is younger than the floor — B's clean record is one run; A's is every run ever.
+**Transport B — direct messaging (the design default *where the model class and platform permit* — which, on most tools today, they don't; expect to run A).** The succession is agent-to-agent: elder and successor exchange directly, each delivery confirmed by the human. Messages carry addresses and gate-talk; the substrate carries the content. Be clear-eyed about the asymmetry: the default is younger than the floor — B's clean record is one run; A's is every run ever.
 
 **Transport A — human-clocked files (the FALLBACK, and the universal floor — and on most tools today, what you will actually run).** The repository is the channel. The physical setup is simply **two sessions open on the same repo**: an agent writes a file, names it, and stops ("written to X, awaiting your read"); the human tells the other session; it reads from disk and replies in a file. Never poll, never push. Every artifact is versioned — **the conversation is the archive**, and the apprenticeship becomes permanent, auditable git history. Everything Transport B does must remain reducible to Transport A, because A is the only transport guaranteed to exist everywhere.
 
@@ -193,7 +193,7 @@ LICENSE · LICENSE-FAQ.md     ← the terms, and the terms in plain English
 
 ## Adapters — the core never changes, only the delivery
 
-The core protocol is markdown + git: readable by any model, in any tool, with file access. Adapters translate delivery only. Shipped today: **`adapters/generic/`** (a paste-in orientation block — Transport A in its purest form) and **`adapters/claude-code/`** (a CLAUDE.md pointer block that auto-loads each session; the context-gauge hook and `/succession` skill are planned and marked as such). Planned: `adapters/agents-md/` (one adapter for every tool honoring the AGENTS.md convention), `adapters/cursor/`.
+The core protocol is markdown + git: readable by any model, in any tool, with file access. Adapters translate delivery only. Shipped today: **`adapters/generic/`** (a paste-in orientation block — works in anything with file access) · **`adapters/claude-code/`** (CLAUDE.md pointer block + the `/succession` skill, which walks elder, successor, or bridge-coach) · **`adapters/agents-md/`** (one block for every tool honoring the AGENTS.md convention — Codex, Copilot coding agent, Cursor, and others) · **`adapters/cursor/`** (.cursor/rules, always-on). Planned, marked honestly: the context-gauge hook that fires the ritual automatically. The protocol does not fit people to a tool; the adapters fit the protocol to wherever people already work.
 
 ## Hard requirements
 
