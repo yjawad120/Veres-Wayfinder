@@ -6,6 +6,7 @@ Wayfinder is **source-available**. Not open source — and that's a deliberate, 
 - Reading, learning, studying the protocol.
 - Running it on your own agent sessions — personal projects, hobby work, evaluation, academic use.
 - **The artifacts your runs produce are YOURS.** Filled packets, answers, gradings, run logs, lineage entries — commit them anywhere, public or private. The no-derivatives clause covers redistributing modified versions of the protocol documents themselves; it does not touch what you create by using the templates as intended.
+- **Adapting the documents inside your own project is fine too** (annotating PROTOCOL.md, adjusting paths, project-specific notes). ND restricts *redistributing* modified versions — not private adaptation in your own repo.
 - Sharing links to this repo, quoting reasonable excerpts with attribution.
 
 ## Needs a commercial license
