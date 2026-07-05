@@ -2,7 +2,8 @@
 > Copy to `line/runs/succession-run-<date>-<n>.md` when a run starts. Fill as you go — the log is written DURING the run, not reconstructed after. Every run's log is evidence: yours joins the corpus the moment it's committed. Delete this block on copy.
 
 # Succession run — <date>
-**Protocol:** Wayfinder supervised succession · human-clocked. **Elder:** ⟨model/name, % context at trigger⟩. **Successor:** ⟨model, arrival condition: cold / pre-oriented (declare what it pre-read)⟩. **Bridge:** ⟨human⟩.
+**Protocol:** Wayfinder supervised succession · human-clocked. **Elder:** ⟨exact model + version, % context at trigger⟩. **Successor:** ⟨exact model + version · arrival condition: cold / pre-oriented (declare what it pre-read)⟩. **Bridge:** ⟨human⟩. **Transport:** ⟨A files / B direct / mixed⟩.
+**Mid-run model changes:** ⟨none / record ANY downgrade, revert, or forced swap the moment noticed — which session, from what to what, at which stage. Unlogged model changes silently invalidate comparisons.⟩
 **Success criteria:** grounded echoes at every gate · continuity answers land with resolving receipts · the blessing stands.
 
 ## The ramp
