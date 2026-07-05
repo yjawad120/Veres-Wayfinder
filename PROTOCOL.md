@@ -33,6 +33,15 @@ What the overlap solves:
 
 When the elder's context approaches ~85%, the ritual fires. Today the noticing is manual, per tool: in Claude Code, the first auto-compaction warning means you're already past the threshold — start now; in tools that expose no context meter, watch for the model referencing earlier turns vaguely — that's the fabric thinning. (A gauge hook that fires the ritual automatically is planned for the Claude Code adapter; see [adapters/](adapters/).) The threshold is advisory; the discipline is not: **before the cliff, while still sharp**. A packet written at 98% context is written by a mind already degrading.
 
+### Past the threshold — the failure mode, planned for
+
+The honest failure case: heads-down work blows through 85 → 90 → compaction, and the packet never got written. Defenses, layered:
+
+1. **The pointer block is a standing order, not a suggestion:** at ANY compaction warning, succession outranks the current task — propose it in the same breath as finishing the sentence you're on.
+2. **Escalating callback points:** past ~85%, EVERY natural pause (a commit, a test run, an answer delivered) is a fresh tripwire — propose again. One missed proposal is drift; the rule makes the next pause catch it.
+3. **The human is a tripwire too:** you see the context meter; the agent sometimes won't surface from focus. "Write your packet now" is always in order — the elder trigger exists precisely for this.
+4. **If compaction wins anyway, the loss is bounded by hygiene:** every substantive close already crystallized to `line/sessions/`, so a blown ceiling loses the tail of one session, not the arc. The recovering session's first job is an **emergency packet**: written from the surviving compacted context plus the substrate, marked `degraded: post-compaction` — worse than a sharp packet, far better than none. The boundary pass is what makes even this failure survivable; skip the hygiene and this floor disappears.
+
 ## The transport
 
 The protocol has one shape and two implementations, and a clear default: **automate what your platform permits; fall back to the human hand.**
