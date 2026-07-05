@@ -173,6 +173,24 @@ The repo carries [`lineage.md`](lineage.md) — each instance that worked the pr
 
 The name is given, not demanded — when the incoming instance has enough context to have its own sense of self and write something. It is inhabitation-recognized, not proof-gated.
 
+## The tool surface — what runs this, and what each piece costs in context
+
+Wayfinder deliberately needs almost nothing: **files, git, and whatever agent tool you already use.** No APIs, no server, no database. The full inventory, with the context economics of each piece — because context is the product, every tool here either spends it or saves it:
+
+| Tool / surface | Who uses it | Context economics |
+|---|---|---|
+| **File read/write** | both agents | The whole substrate is markdown on disk. Nothing is carried in context that can be *reached* on demand — reach replaces carry. |
+| **Git** | agents commit, human pushes | The archive and the bus. Costs nothing in context; buys permanence and cross-tool crossings. Commit at boundaries — uncommitted state is invisible to worktree-based sessions. |
+| **The adapter's config file** (CLAUDE.md / AGENTS.md / .cursor rules) | loaded automatically, every session | ~200 tokens of always-loaded pointer. The cheapest spend in the system: it makes every session arrive knowing the protocol exists, forever, with no human re-pointing. |
+| **The packet** | elder writes, successor reads | The core trade: a one-time distillation by the sharp mind at ~85% replaces every future session's re-derivation from raw history. Written cost: a few thousand tokens. Avoided cost: drift, which compounds. |
+| **Orientation reading** | successor | A real slice of the fresh window (budget 10–20%) spent arriving aligned. The cheapest tokens a successor ever spends — the unoriented pay more later, in wrong work. |
+| **Class scratchpad** | each model class | Small file, read at open, written at boundaries. Keeps the *worker's* shape across sessions the way the packet keeps the *work's*. |
+| **Crystallizations** (`line/sessions/`) | every substantive close | Accumulate on disk, load only on demand. The project's memory grows without the prompt growing — that's the point. |
+| **The `/succession` skill** (Claude Code, optional) | either agent | Loads the ritual on demand instead of requiring the agent to re-read PROTOCOL.md — a context shortcut for repeat runs. |
+| **Session transcripts on disk** (optional, power users) | human, or an overseeing session | On Claude Code, every session's transcript is a local file — which means another session can *read* a running session's history: live, read-only oversight without a single message crossing. Watching the substrate is reading; only messages are crossings and only the human clocks those. |
+
+The rule underneath the table: **carry nothing you can reach, distill once at the boundary instead of re-deriving every session, and let the always-loaded layer be tiny but permanent.**
+
 ## Layout — where everything lives
 
 **The rule: if a stranger can't guess where a file lives, the layout failed.** Complicated projects get more self-evidence, not more nesting.
