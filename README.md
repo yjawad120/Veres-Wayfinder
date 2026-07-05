@@ -117,6 +117,10 @@ You've found a Wayfinder install (or its repo). There are two ways you got here,
 
 Either way, the arrival ends the same: oriented, honest about what's unclear, and with your judgment intact. Noticing something off is part of the work here, not a failure.
 
+## Support the work
+
+Wayfinder is built and maintained by one person. If it's earning its keep in your projects, three ways to support it, in order of impact: **commercial use → [get a license](LICENSE-FAQ.md)** (that's what funds the work); **share your run logs** — every succession you run and publish is evidence the protocol grows on; and if you're a free user who just wants to say thanks, **sponsorship is welcome** (the Sponsor button above, once you see it, works — or just tell someone whose agents keep forgetting things).
+
 ## License
 
 Wayfinder is **source-available, not open source** — free to read, learn from, evaluate, and run on your own sessions. The documents are [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/); code is [PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/) — full terms in [LICENSE](LICENSE), plain-English answers in [LICENSE-FAQ.md](LICENSE-FAQ.md). Using it inside a company, shipping products built on it, or deploying it commercially requires a license. I'm a solo builder; this is what funds the work. Commercial licensing or engagements: **yjawad120@gmail.com**.
