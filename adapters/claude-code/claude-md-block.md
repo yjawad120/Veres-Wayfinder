@@ -1,7 +1,7 @@
 # Claude Code adapter — the CLAUDE.md pointer block
 > Append **only the fenced block below** to your project's CLAUDE.md (create the file if it doesn't exist — never overwrite existing content; don't copy this header). CLAUDE.md auto-loads every session, so the protocol re-renders itself: no one ever has to re-point an instance at it.
 >
-> **Ships with this adapter, installed only with the human's explicit yes:** the `/succession` skill (`skills/succession/`). **Agents: do not copy it into `.claude/skills/` on your own** — installing agent config is the human's call; name it and wait. **Humans:** copy `skills/succession/` into your project's `.claude/skills/` (or tell your agent to, explicitly) — it walks whichever role the moment calls for: elder, successor, or bridge coach.
+> **Ships with this adapter, installed only with the human's explicit yes:** the `/succession` skill (`skills/succession/`). **Agents: do not copy it into `.claude/skills/` on your own** — installing agent config is the human's call; name it and wait for a yes given to words (a chat reply, or approval of a plan that lists the skill explicitly — never just a file-permission popup). **Humans:** copy `skills/succession/` into your project's `.claude/skills/` (or tell your agent to, explicitly) — it walks whichever role the moment calls for: elder, successor, or bridge coach.
 > **Planned (not yet shipped, honestly):** a context-gauge hook that fires the ritual at threshold automatically. Today the trigger is manual: when you see the first compaction warning, you're past the threshold — start.
 
 ---
