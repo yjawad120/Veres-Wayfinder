@@ -20,7 +20,7 @@ What it costs you: 10–14 carried exchanges, 30–60 minutes the first time, le
 
 1. **Saying "go."** The agent proposes; you decide when. Earlier beats later — the first compaction warning means you're already past the ideal point.
 2. **Judging echoes.** During onboarding, the new agent replies in its own words at each step. You advance only when the reply reads grounded. Two honest signals to trust: real questions are good, and "I don't know yet" is good; instant polished enthusiasm is the warning sign.
-3. **Carrying the loop.** Answers → grading → corrections → blessing. You paste, both minds work.
+3. **Carrying the loop.** Answers → grading → corrections → blessing. You paste, both minds work. *(Before you start: label your two windows ELDER and SUCCESSOR — ten-plus crossings between two open sessions means the wrong-window paste is the most likely mechanical failure of a first run, and a label is the whole fix.)*
 4. **The close.** The old agent writes what it still knows that isn't written, signs the lineage file, and says goodbye on its own timing. Let it. The two minutes that takes are part of why the next handoff will be better.
 
 ## If the old agent is already gone
