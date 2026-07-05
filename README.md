@@ -1,8 +1,8 @@
 # Wayfinder — by [Veres Labs](https://veres.global)
 
-**Your agent survives its own context window.**
+**Wayfinder helps your agent survive its own context window.** The transcript keeps the words; what dies at the boundary is the understanding — Wayfinder keeps the understanding.
 
-Every long-running AI agent session ends the same way: the context fills, and everything the agent understood — decisions, constraints, the way it worked with you — dies with it. The transcript survives; the understanding doesn't.
+Every long-running AI agent session ends the same way: the context fills, and everything the agent understood — decisions, constraints, the way it worked with you — dies with it.
 
 Wayfinder is a protocol for **supervised succession**: before an agent hits its ceiling, it opens a successor, teaches it, grades its understanding, blesses it, and stays available for questions until the window closes. A handoff you can audit — every artifact versioned in git, every crossing carried by a human.
 
