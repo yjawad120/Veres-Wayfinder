@@ -19,6 +19,6 @@ Wayfinder is **source-available**. Not open source — and that's a deliberate, 
 - **Code (adapters, scripts):** [PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/) — any noncommercial use; commercial use requires a license.
 
 ## Getting a commercial license
-Email **yjawad120@gmail.com** with a line about what you're building. Solo builder, replies within 48 hours. Licensing is simple and per-deal — and if what you actually want is the succession machinery built into your product properly, that's an engagement, and I'm available.
+Email **yas@veres.global** with a line about what you're building. Solo builder, replies within 48 hours. Licensing is simple and per-deal — and if what you actually want is the succession machinery built into your product properly, that's an engagement, and I'm available.
 
 *Veres Wayfinder™ · © 2026 Yass Jawad · [veres.global](https://veres.global)*
