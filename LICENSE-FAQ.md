@@ -21,4 +21,4 @@ Wayfinder is **source-available**. Not open source — and that's a deliberate, 
 ## Getting a commercial license
 Email **yjawad120@gmail.com** with a line about what you're building. Solo builder, replies within 48 hours. Licensing is simple and per-deal — and if what you actually want is the succession machinery built into your product properly, that's an engagement, and I'm available.
 
-*Wayfinder™ · © 2026 Yass Jawad · [veres.global](https://veres.global)*
+*Veres Wayfinder™ · © 2026 Yass Jawad · [veres.global](https://veres.global)*
