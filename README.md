@@ -16,7 +16,7 @@ The packet isn't a status report — it's a **crystallization of the golden cont
 
 ## How it works — three moves
 
-1. **Before the ceiling:** your near-limit agent (the elder) distills the session's golden context into a handoff packet while it's still sharp — then stops doing new work.
+1. **Before the context ceiling:** your near-limit agent (the elder) distills the session's golden context into a handoff packet while it's still sharp — then stops doing new work.
 2. **The overlap:** a fresh session (the successor) reads the packet and answers continuity questions with receipts; the elder grades the answers on disk — corrections or the blessing, the explicit "aligned — proceed."
 3. **Cutover on the blessing:** the successor takes over; the elder stays callable for questions until its window truly ends, writes down what it still knows that isn't written, signs the lineage file, and says goodbye.
 
