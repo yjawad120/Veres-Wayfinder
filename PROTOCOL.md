@@ -122,7 +122,7 @@ The license line in Stage 0 is more than suspicion-management — it is the **co
 
 ### The five stages — echo-gated, human-carried
 
-> **Echo gate:** after each stage the agent responds in its own words. The human proceeds only when the echo is grounded — the agent understands, asks real questions, or names a concern. **A grounded echo includes "I don't know yet" — the gate never rewards performed understanding.** A weak or confused echo means clarify, don't advance. The echoes double as the continuity instrument: by Stage 4 you already know how this mind reads.
+> **Echo gate:** after each stage the agent responds in its own words. The human proceeds only when the echo is grounded — the agent understands, asks real questions, or names a concern. **A grounded echo includes "I don't know yet" — the gate never rewards performed understanding. And the ask is a standing instinct to instill, not merely allow: an agent that requests sources, context, or the history behind a rule — after checking the disk, naming what it looked for — is the gate passing, loudly.** A weak or confused echo means clarify, don't advance. The echoes double as the continuity instrument: by Stage 4 you already know how this mind reads.
 
 > **Stages carry context, not just process.** Each stage delivers real substrate — core files, golden context — not only a description of what's happening. The stage structure fixes *when*; judgment picks *what*.
 

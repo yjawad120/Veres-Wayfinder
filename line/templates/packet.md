@@ -24,7 +24,7 @@
 > ~5 questions testing **inhabitation, not recall** — each requires having absorbed a rule, a wound, or a sequence, not found a fact. Good shapes: "what ships, and what remains?" · "what happened with ⟨the recent failure⟩, and what practice came out of it — whose is it?" · "what is gated and must NOT be built solo?" · "what would you do FIRST, and why is it not ⟨the tempting thing⟩?"
 1. ⟨…⟩ 2. ⟨…⟩ 3. ⟨…⟩ 4. ⟨…⟩ 5. ⟨…⟩
 
-Write answers, numbered, WITH receipts (paths · commit hashes · verbatims) to `line/answers/successor-answers-<date>.md` — nothing else, no other actions. Thin spots gate nothing; unmarked inference does. I grade with my remaining context to `line/gradings/elder-grading-<date>.md`: corrections or blessing. Wrong answers get corrected, not punished — that's the point of the overlap.
+Write answers, numbered, WITH receipts (paths · commit hashes · verbatims) to `line/answers/successor-answers-<date>.md` — nothing else, no other actions. Thin spots gate nothing; unmarked inference does. **And the standing right that comes with this inheritance: ASK. If you need — or simply want — a source, more context, a decision's history, the why behind a rule: check the disk first, then ask, naming what you looked for and where.** A named gap beats a guessed fill every time; wanting context is the job, unfounded confidence is the failure mode. I grade with my remaining context to `line/gradings/elder-grading-<date>.md`: corrections or blessing. Wrong answers get corrected, not punished — that's the point of the overlap.
 
 ## Step 3 — Your first build (only after the blessing)
 ⟨the mission: what to build first, its gates, what it must NOT preempt⟩
