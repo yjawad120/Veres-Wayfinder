@@ -1,12 +1,12 @@
 # Wayfinder — by [Veres Labs](https://veres.global)
 
-**Wayfinder helps your agent survive its own context window.** The transcript keeps the words; what dies at the boundary is the understanding — Wayfinder keeps the understanding.
+*Wayfinders mark the trail as they walk it — each crystallization a stone — so the next one crosses by the marks, not by luck.*
+
+**Your agent survives its own context window.** The transcript keeps the words. The understanding is what dies — and what Wayfinder keeps.
 
 Every long-running AI agent session ends the same way: the context fills, and everything the agent understood — decisions, constraints, the way it worked with you — dies with it.
 
-Wayfinder is two practices on one substrate. Day to day, your agents **create and maintain crystallized models of your project — golden context**: small ledgers (session crystallizations, living reference docs, class scratchpads) that every session loads to arrive oriented and stay aligned to the work. And at the ceiling, agent-to-agent **supervised succession**: before an agent runs out, it opens a successor, teaches it, grades its understanding, blesses it, and stays available for questions until the window closes — a handoff you can audit, every artifact versioned in git, every crossing carried by a human.
-
-The name is the whole method: wayfinders mark the trail as they walk it — each crystallization a stone — so the next one crosses by the marks, not by luck.
+Day to day, your agents create and maintain crystallized models of your project — **golden context**: small ledgers (session crystallizations, living reference docs, class scratchpads) that every session loads to arrive oriented and stay aligned. At the ceiling, **agent-to-agent supervised succession**: before an agent runs out, it opens a successor, teaches it, grades its understanding, blesses it, and stays available for questions until the window closes — a handoff you can audit, every artifact versioned in git, every crossing carried by a human.
 
 This README is the five-minute version — you can run a succession today from this page alone. The full protocol (roles, transports, artifacts, the onboarding ramp, the callback window) is in **[PROTOCOL.md](PROTOCOL.md)**; what it looks like from your seat, in **[USER-GUIDE.md](USER-GUIDE.md)**.
 
@@ -25,8 +25,6 @@ You carry every crossing by hand — that's the "supervised," and it's the desig
 ## Why not just compaction?
 
 Compaction is lossy summarization performed by a degraded mind at 98% of its window. Succession is curation by the sharp mind at 85% — and, unlike any summary, it's **checked**: the successor plays its understanding back, and the author of the handoff grades it before it's trusted. A handoff file can't push back on a misreading; a living elder can.
-
-> **Who's who, in five lines:** **the elder** — your outgoing agent, near its context limit. **The successor** (in ceremony, the heir) — the fresh session that inherits the work. **The bridge** — you; every crossing goes through your hands. **the blessing** — the elder's explicit "aligned — proceed"; nothing cuts over before it. **the Line** — the lineage file each instance signs at its close. (*Plumb* and *Ford* are the first elder and the first author, from the origin project — you'll meet their names in the evidence.)
 
 ## Quickstart
 
@@ -58,6 +56,8 @@ Run the whole loop without stopping to ask between steps: (1) find the Wayfinder
 *Not on Claude Code? Wayfinder runs anywhere agents read files: [`adapters/agents-md/`](adapters/agents-md/agents-md-block.md) covers every tool honoring the AGENTS.md convention (Codex, Copilot coding agent, Cursor, and others) · [`adapters/cursor/`](adapters/cursor/) for .cursor/rules · [`adapters/generic/`](adapters/generic/orientation-block.md) for everything else. Swap step (1) above for the matching adapter's instructions.*
 
 ### The six steps
+
+> **Who's who, in five lines:** **the elder** — your outgoing agent, near its context limit. **The successor** (in ceremony, the heir) — the fresh session that inherits the work. **The bridge** — you; every crossing goes through your hands. **the blessing** — the elder's explicit "aligned — proceed"; nothing cuts over before it. **the Line** — the lineage file each instance signs at its close. (*Plumb* and *Ford* are the first elder and the first author, from the origin project — you'll meet their names in the evidence.)
 
 1. **Install:** copy the **whole Wayfinder folder** into your project repo (or clone it there) — **and commit it before your first run.** Versioning is a hard requirement, and it bites in practice: agent worktrees can't even see untracked files, so an uncommitted install is invisible to half your sessions. Everything cross-references — README, PROTOCOL, adapters, templates all point at each other, so partial installs strand the pointers. Skim [PROTOCOL.md](PROTOCOL.md) once yourself — ten minutes; you're the bridge, and the bridge should know the river. *(New to git? "Committing" just means saving a permanent snapshot — the command is `git add . && git commit -m "install wayfinder"`, or simply tell your agent: "commit the install.")* *(Installed as a subfolder? Prefix the paths in the paste blocks accordingly, e.g. `wayfinder/line/…`.)*
 2. **Open the successor first:** when your working agent nears its ceiling (rule of thumb: the first compaction warning means you're already past the threshold — start now), open a fresh session on the same repo and pick the model you want. Leave it waiting. Also copy `line/templates/run-log.md` to `line/runs/` now — the run gets logged as it happens, not reconstructed after.
