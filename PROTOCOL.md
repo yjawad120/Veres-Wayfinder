@@ -209,7 +209,7 @@ Wayfinder deliberately needs almost nothing: **files, git, and whatever agent to
 | **Orientation reading** | successor | A real slice of the fresh window (budget 10–20%) spent arriving aligned. The cheapest tokens a successor ever spends — the unoriented pay more later, in wrong work. |
 | **Class scratchpad** | each model class | Small file, read at open, written at boundaries. Keeps the *worker's* shape across sessions the way the packet keeps the *work's*. |
 | **Crystallizations** (`line/sessions/`) | every substantive close | Accumulate on disk, load only on demand. The project's memory grows without the prompt growing — that's the point. |
-| **The `/succession` skill** (Claude Code, optional) | either agent | Loads the ritual on demand instead of requiring the agent to re-read PROTOCOL.md — a context shortcut for repeat runs. |
+| **The `wayfinder` skill** (Claude Code, optional) | either agent | Loads the ritual on demand instead of requiring the agent to re-read PROTOCOL.md — a context shortcut for repeat runs. |
 | **Session transcripts on disk** (optional, power users) | human, or an overseeing session | On Claude Code, every session's transcript is a local file — which means another session can *read* a running session's history: live, read-only oversight without a single message crossing. Watching the substrate is reading; only messages are crossings and only the human clocks those. |
 
 The rule underneath the table: **carry nothing you can reach, distill once at the boundary instead of re-deriving every session, and let the always-loaded layer be tiny but permanent.**
@@ -236,7 +236,7 @@ LICENSE · LICENSE-FAQ.md     ← the terms, and the terms in plain English
 
 ## Adapters — the core never changes, only the delivery
 
-The core protocol is markdown + git: readable by any model, in any tool, with file access. Adapters translate delivery only. Shipped today: **`adapters/generic/`** (a paste-in orientation block — works in anything with file access) · **`adapters/claude-code/`** (CLAUDE.md pointer block + the `/succession` skill, which walks elder, successor, or bridge-coach) · **`adapters/agents-md/`** (one block for every tool honoring the AGENTS.md convention — Codex, Copilot coding agent, Cursor, and others) · **`adapters/cursor/`** (.cursor/rules, always-on). Planned, marked honestly: the context-gauge hook that fires the ritual automatically. The protocol does not fit people to a tool; the adapters fit the protocol to wherever people already work.
+The core protocol is markdown + git: readable by any model, in any tool, with file access. Adapters translate delivery only. Shipped today: **`adapters/generic/`** (a paste-in orientation block — works in anything with file access) · **`adapters/claude-code/`** (CLAUDE.md pointer block + the `wayfinder` skill ("use Wayfinder" triggers it — no slash needed), which walks elder, successor, or bridge-coach) · **`adapters/agents-md/`** (one block for every tool honoring the AGENTS.md convention — Codex, Copilot coding agent, Cursor, and others) · **`adapters/cursor/`** (.cursor/rules, always-on). Planned, marked honestly: the context-gauge hook that fires the ritual automatically. The protocol does not fit people to a tool; the adapters fit the protocol to wherever people already work.
 
 ## Hard requirements
 

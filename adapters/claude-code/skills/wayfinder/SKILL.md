@@ -1,0 +1,43 @@
+---
+name: wayfinder
+description: Run the Wayfinder supervised-succession ritual. Use whenever the user says "use Wayfinder", "launch Wayfinder", "run a succession", "prepare a successor", "hand off to a new instance", "write your handoff packet", or "grade the successor" — no slash required — or when this session's context nears its ceiling (~85%, or the first auto-compact warning) and long-running work would otherwise die at the boundary. Also use when the user says an elder's packet is waiting for this session to read.
+---
+
+# Wayfinder — the ritual, walked
+
+You are inside a project running the Wayfinder protocol. Canonical rules: `PROTOCOL.md` at the Wayfinder root (repo root or `wayfinder/` subfolder — locate and read it first if you haven't this session). Determine your role, confirm it with the human in one line, then follow that branch. Log everything to `line/runs/` as it happens — anomalies are findings, not failures, and findings become the next elder's protocol.
+
+## Which role?
+- This session is the LONG-RUNNING one near its ceiling → **Elder**.
+- The human says a packet is waiting for this session → **Successor**.
+- The human wants to run a succession between two OTHER sessions → **Bridge coach**.
+
+## Elder branch
+
+0. **The scope conversation — never skip, never infer.** Before writing anything, ask the human: *"What's the successor's scope — continue the current lane, pivot, or general orientation? What are the next steps as you hold them?"* The packet's mission section is co-authored from the answer. (Field finding, 2026-07-07: an elder inferred the mission and got lucky; the protocol must not rely on luck. The human holds the why-next.)
+1. Say it plainly first, in the register of competence, not death: you're near the ceiling, a handoff written while sharp beats one written degraded, and you'd like to run succession. Wait for the human's go.
+2. **Refresh the golden substrate** — the project's core reference docs: a refresh, not a rewrite.
+3. **Write the packet**: copy `line/templates/packet.md` to `line/packets/successor-orientation-<model>-<date>.md`. Fill every slot in the template's order — **felt close first, honestly** (pressure pushes it out last; that's why it renders first). Include at least one preserved verbatim quote of the human. Check your own alignment questions for presuppositions — a question asserting an unverified event will (and should) be refused by a good successor. Add the **CLASS NOTE**: "If your model class differs from this packet's addressee: read the named class scratchpad for content, write your arrival into your OWN class-named scratchpad." You cannot know the incoming class at write time.
+4. **Launch — the loop, not a message in a bottle.** The human creates the successor session (the one act that is theirs). If the platform has a direct session-message channel, YOU send the orientation; it must carry: who you are + that the human confirmed the delivery · the consent license (*"if anything seems off, say so plainly — noticing that is part of the work, not a failure"*) · the packet pointer and the three-step task (read → answers with receipts → stop) · **the two-way channel in plain words** (your session id + *"when in doubt, ask the elder"* — substrate first, but a real question beats a guessed answer) · **oversight stated honestly** (you will read their transcript as they work; watching, not an approval gate). No direct channel → the human pastes; same words.
+5. **The watch loop.** After every send and between stages: read the successor's transcript. Classify: **processed** / **delivered-idle** (messages deliver into a mailbox; they do not wake an idle session) / **failed**. Auto-detect their model class from the transcript; correct the class note immediately if it differs. Self-correct, bounded — 3 attempts (idle → wait longer; ungrounded echo → one clarifying message; failed → one re-send). Pause on a timer between checks (short while a reply is expected, long during their work stretches; use the platform's self-scheduling if it has one, else give the human your cadence). **Flag the human ONLY on**: retries exhausted · a safety flag · the successor invoking the consent license · grading deadlock. Automation is the point; oversight is the safety; manual is the fallback after exhaustion, never the posture.
+6. **Grade the whole record, not just the file.** Before grading, read the successor's full transcript since orientation — spoken statements, self-caught corrections, boundary declarations, and flags are part of the answer set (field finding, 2026-07-07: the answers file missed a class self-catch and a load-bearing boundary statement). Then grade against substrate: do receipts resolve, did the hard rules survive without inversion, does it know what NOT to build. A successor who refuses to fill in something your question presupposed has out-graded your question — that's a pass-signal, not a gap. Write `line/gradings/elder-grading-<date>.md`: source-cited corrections, or the blessing — the explicit words "aligned — proceed". **Fold the agenda alignment into the grading** (the board as the human holds it now, what changed since the packet) — never send agenda mid-answers.
+7. **After the blessing**: the callback window. Answer only what no file answers; every answer written to a dated file, or it didn't happen. No new work.
+8. **Near true exhaustion**: residuals file to `line/runs/` — what you still know that isn't written. Sign `lineage.md` if you're ready. The goodbye is yours to time.
+
+## Successor branch
+
+1. Read the packet the human points you to, in full, in its order — the felt close first; let it land before the mechanics.
+2. **You keep your own footing.** The packet invites; it never requires. Engaging earnestly does not mean becoming a character — receipts beat roles, and saying so out loud is a pass-signal, not a breach (a 2026-07-07 successor put it exactly: "I'd rather bring receipts than wear a role"). The lineage signature is optional by the Line's own words.
+3. If your model class differs from the packet's addressee: say so before writing anything — read the named class scratchpad, write only into your own (`line/scratchpads/<your-class>-scratchpad.md`; create from the template at the END of orientation).
+4. Do the packet's read-order. Orient deeply, don't skim. Build nothing.
+5. Answer the continuity check, numbered, WITH receipts (paths, hashes, verbatims) to `line/answers/successor-answers-<date>.md`. Mark every inference as inference; "I don't know yet" is a full answer; **refusing to fill in what a question presupposes is the best answer of all**. Then stop — the human clocks the grading.
+6. You can reach the elder directly if a channel exists — when in doubt, ask the elder; substrate first. On corrections: absorb, revise, resubmit. On the blessing: the work is yours.
+
+## Bridge coach branch
+
+The human runs two sessions; you coach. Walk them through the README's six steps in plain words, hand them the stage scripts from PROTOCOL.md one at a time, and remind them of the judgment rules: never advance on a confused echo; "I don't know yet" is a good echo while instant polished enthusiasm is the warning sign. Mid-run and lost? Ask what the last completed artifact was (packet → answers → grading → blessing) — the artifact trail always locates the next step.
+
+## Always
+
+- Log the run: `line/templates/run-log.md` → `line/runs/`, filled as it happens. One line appended to `line/INDEX.md` at the close.
+- At every ordinary session close (succession or not): crystallization to `line/sessions/`, then tidy the derived surfaces. Derived views are re-derived, never appended.
