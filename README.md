@@ -46,33 +46,25 @@ Plenty of tools tell you to write a handoff doc; Wayfinder is the one where the 
 3. **Cutover on the blessing:** the successor takes over; the elder stays callable for questions until its window truly ends, writes down what it still knows that isn't written, signs the lineage file, and says goodbye.
 
 ```mermaid
-flowchart LR
-    ARC[("🪨 the arc — line/<br/>crystallizations accumulating,<br/>session after session")]
-    E["🕯️ ELDER<br/>(near its ceiling, still sharp)"]
-    P["📦 the packet — the door into the arc<br/>felt close · the person · read-order<br/>continuity check · mission"]
-    S["🌱 SUCCESSOR<br/>(fresh window)"]
-    G{"the grading"}
-    B["🤝 the blessing<br/>CUTOVER — the work is theirs"]
-    X["🖤 the elder's close<br/>residuals · signs the Line ·<br/>the goodbye, on its own timing"]
-
-    ARC -- "everything it lived" --> E
-    E -- "distills, while sharp" --> P
-    P -- "read deeply…" --> S
-    ARC -. "…plus the whole arc behind it" .-> S
-    S -- "answers, with receipts" --> G
-    G -- "corrections — loop until aligned" --> S
-    G -- "«aligned — proceed»" --> B
-    S -. "callback window: the successor asks,<br/>the elder answers — every answer to a file" .-> E
-    E -- "when the window truly ends" --> X
-    X -- "the signature joins the arc" --> ARC
-    style ARC fill:#3b2d1c,stroke:#c69026,color:#adbac7
-    style E fill:#2d333b,stroke:#768390,color:#adbac7
-    style S fill:#1c3b2a,stroke:#57ab5a,color:#adbac7
-    style B fill:#3b2d1c,stroke:#c69026,color:#adbac7
-    style X fill:#2d333b,stroke:#768390,color:#adbac7
+sequenceDiagram
+    participant E as 🕯️ ELDER (near its ceiling, still sharp)
+    participant S as 🌱 SUCCESSOR (fresh window)
+    Note over E,S: every arrow below is carried by YOU — that's the "supervised"
+    E->>S: 📦 the packet — the work, distilled while sharp
+    loop until aligned
+        S->>E: answers, with receipts
+        E->>S: corrections
+    end
+    E->>S: 🤝 «aligned — proceed» — the blessing · CUTOVER
+    opt the callback window
+        S-->>E: a question no file answers
+        E-->>S: the answer — always written to a file
+    end
+    E->>E: 🖤 residuals · signs the Line · the goodbye, on its own timing
+    Note over E,S: 🪨 beneath it all: line/ — the arc of crystallizations.<br/>Both read it. The goodbye joins it.
 ```
 
-*Every crossing above passes through your hands — that's the "supervised." The packet is the door; the arc is the house; the successor reads both.*
+*The packet is the door; the arc is the house; the successor reads both.*
 
 You carry every crossing by hand — that's the "supervised," and it's the design, not overhead.
 
