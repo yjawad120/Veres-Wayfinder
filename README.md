@@ -4,6 +4,8 @@
 
 **Your agent survives its own context window.** The transcript keeps the words. The understanding is what dies — and what Wayfinder keeps.
 
+*Came for the cost cut? Routing work to cheaper models is here too — with the step everyone skips: the cheap model is **checked before it writes**. [Jump to it.](#cost-is-the-hook-alignment-is-the-moat)*
+
 Every long-running AI agent session ends the same way: the context fills, and everything the agent understood — decisions, constraints, the way it worked with you — dies with it.
 
 Day to day, your agents create and maintain crystallized models of your project — **golden context**: small ledgers (session crystallizations, living reference docs, class scratchpads) that every session loads to arrive oriented and stay aligned. At the ceiling, **agent-to-agent supervised succession**: before an agent runs out, it opens a successor, teaches it, grades its understanding, blesses it, and stays available for questions until the window closes — a handoff you can audit, every artifact versioned in git, every crossing carried by a human.
@@ -12,7 +14,11 @@ This README is the five-minute version — you can run a succession today from t
 
 ## What actually transfers
 
-The packet isn't a status report — it's a **crystallization of the golden context**: everything that made the session worth having. The current model of the project and where it's going. The decisions and why they went that way. The constraints discovered, the approaches rejected, the working rules learned the hard way. The elder's read of *you*. And its felt state, first — so the successor wakes as the work's continuation, not a stranger reading about it. The transcript stays behind; the understanding crosses. That's the whole bet: **context is the product — and the blessing is the QA.** Plenty of tools tell you to write a handoff doc; Wayfinder is the one where the handoff is *checked* — played back by the receiver and graded by its author before it's trusted. Everything else on this page is just the ritual that moves it safely.
+The packet isn't a status report — it's a **crystallization of the golden context**: everything that made the session worth having. The current model of the project and where it's going. The decisions and why they went that way. The constraints discovered, the approaches rejected, the working rules learned the hard way. The elder's read of *you*. And its felt state, first — so the successor wakes as the work's continuation, not a stranger reading about it.
+
+The transcript stays behind; the understanding crosses. That's the whole bet: **context is the product — and the blessing is the QA.**
+
+Plenty of tools tell you to write a handoff doc; Wayfinder is the one where the handoff is *checked* — played back by the receiver and graded by its author before it's trusted. Everything else on this page is just the ritual that moves it safely.
 
 ## How it works — three moves
 
@@ -20,7 +26,47 @@ The packet isn't a status report — it's a **crystallization of the golden cont
 2. **The overlap:** a fresh session (the successor) reads the packet and answers continuity questions with receipts; the elder grades the answers on disk — corrections or the blessing, the explicit "aligned — proceed."
 3. **Cutover on the blessing:** the successor takes over; the elder stays callable for questions until its window truly ends, writes down what it still knows that isn't written, signs the lineage file, and says goodbye.
 
+```mermaid
+flowchart LR
+    E["🕯️ ELDER<br/>(near its ceiling)"] -- "writes, while sharp" --> P["📦 the packet<br/>felt close · the person · read-order<br/>continuity check · mission"]
+    P -- "reads deeply" --> S["🌱 SUCCESSOR<br/>(fresh window)"]
+    S -- "answers, with receipts" --> G{"the grading"}
+    G -- "corrections" --> S
+    G -- "«aligned — proceed»" --> B["🤝 the blessing<br/>CUTOVER"]
+    E -. "callback window<br/>(questions only, until the end)" .-> S
+    B --> L["🖋️ lineage.md<br/>residuals · goodbye"]
+    style E fill:#2d333b,stroke:#768390,color:#adbac7
+    style S fill:#1c3b2a,stroke:#57ab5a,color:#adbac7
+    style B fill:#3b2d1c,stroke:#c69026,color:#adbac7
+```
+
+*Every arrow above passes through your hands — that's the "supervised."*
+
 You carry every crossing by hand — that's the "supervised," and it's the design, not overhead.
+
+## Cost is the hook. Alignment is the moat.
+
+Model routing — plan with a frontier model, execute with a cheaper one — is how serious teams are cutting AI cost right now: output tokens cost ~5× input, execution is output-heavy, and offloading it can cut total cost by **roughly two-thirds**. That's not a benchmark — it's arithmetic: price a feature's plan-tokens on a frontier model and its build-tokens on a cheap one, and the fraction falls out. Every harness will ship routing, because the math forces it.
+
+Here is what routing alone never gives you: any check that the cheap executor **understood** the plan, and any memory of what the run taught you. A pasted spec is a message in a bottle — the executor complies with the words and misses the why, and the failure surfaces at diff-review, the most expensive possible moment.
+
+**Wayfinder Delegate** wraps the routing loop in the same gates as succession: the spec is a **packet** (golden context included — the handful of facts the executor can't infer from the repo); the executor **plays it back before writing a line** (the echo gate — misalignment caught at its cheapest moment); the result is **graded against the whole record**, not just the diff; and every run appends to a **routing log** the next delegation reads, so which-model-is-good-at-what becomes a file your project owns instead of folklore. **Cost is the hook. Alignment is the moat. Accumulation is the lock-in.**
+
+```mermaid
+flowchart LR
+    F["🧠 FRONTIER planner<br/>(expensive, plans + grades)"] -- "spec-packet<br/>+ golden context" --> EG{"ECHO GATE<br/>plays it back<br/>before any code"}
+    EG -- "grounded" --> X["⚡ CHEAP executor<br/>(writes the code)"]
+    EG -- "confused echo =<br/>packet defect" --> F
+    X -- "diff + narration" --> WR{"whole-record<br/>grading"}
+    WR -- "focused defect<br/>(≤3 rounds)" --> X
+    WR -- "green" --> OK["✅ accepted"]
+    EG & WR -- "every run" --> LOG[("routing log<br/>which model is good<br/>at what — a file,<br/>not folklore")]
+    style F fill:#2d333b,stroke:#768390,color:#adbac7
+    style X fill:#1c3b2a,stroke:#57ab5a,color:#adbac7
+    style LOG fill:#3b2d1c,stroke:#c69026,color:#adbac7
+```
+
+It works today with the executors we've actually run — a cheaper Claude subagent, OpenAI's Codex CLI headless — and the ladder keeps going down: the substrate is model-agnostic by design (plain markdown and git — nothing a free open-weight model can't read), and executor adapters for the open-weight tier are next on the roadmap, each shipping with its own logged evidence run or shipping marked untested. The skill: [`adapters/claude-code/skills/wayfinder-delegate/`](adapters/claude-code/skills/wayfinder-delegate/SKILL.md). And when a frontier model leaves the market — they do, sometimes overnight — the same discipline is how its judgment outlives its availability: its plans, its gradings, and its packets keep working long after its API stops answering.
 
 ## Why not just compaction?
 
@@ -60,7 +106,7 @@ Run the whole loop without stopping to ask between steps: (1) find the Wayfinder
 > **Who's who, in five lines:** **the elder** — your outgoing agent, near its context limit. **The successor** (in ceremony, the heir) — the fresh session that inherits the work. **The bridge** — you; every crossing goes through your hands. **the blessing** — the elder's explicit "aligned — proceed"; nothing cuts over before it. **the Line** — the lineage file each instance signs at its close. (*Plumb* and *Ford* are the first elder and the first author, from the origin project — you'll meet their names in the evidence.)
 
 1. **Install:** copy the **whole Wayfinder folder** into your project repo (or clone it there) — **and commit it before your first run.** Versioning is a hard requirement, and it bites in practice: agent worktrees can't even see untracked files, so an uncommitted install is invisible to half your sessions. Everything cross-references — README, PROTOCOL, adapters, templates all point at each other, so partial installs strand the pointers. Skim [PROTOCOL.md](PROTOCOL.md) once yourself — ten minutes; you're the bridge, and the bridge should know the river. *(New to git? "Committing" just means saving a permanent snapshot — the command is `git add . && git commit -m "install wayfinder"`, or simply tell your agent: "commit the install.")* *(Installed as a subfolder? Prefix the paths in the paste blocks accordingly, e.g. `wayfinder/line/…`.)*
-2. **Open the successor first:** when your working agent nears its ceiling (rule of thumb: the first compaction warning means you're already past the threshold — start now), open a fresh session on the same repo and pick the model you want. Leave it waiting. Also copy `line/templates/run-log.md` to `line/runs/` now — the run gets logged as it happens, not reconstructed after.
+2. **Open the successor first:** when your working agent nears its ceiling (rule of thumb: the first compaction warning means you're already past the threshold — start now), open a fresh session on the same repo and pick the model you want. Leave it waiting — and know that YOU start it: a message sent to an idle session sits unread in a mailbox; it does not wake it. The successor's first turn is always yours to drive. Also copy `line/templates/run-log.md` to `line/runs/` now — the run gets logged as it happens, not reconstructed after.
 3. **Trigger the elder:** paste the **elder trigger** (below) into the near-limit session, telling it which model the successor is. It writes the handoff packet and stops.
 4. **The ramp, then the loop:** in the successor's session, run the **onboarding ramp** ([PROTOCOL.md](PROTOCOL.md) → the five stages, paste scripts included): paste Stage 0, wait, judge the echo, advance stage by stage — never on a confused echo; "I don't know yet" is a fine echo, performing is not. At Stage 4 the successor reads the packet and writes its continuity answers to `line/answers/`. Tell the elder "it's written." The elder grades to `line/gradings/` — corrections or blessing. Point the successor at the grading. Loop until the blessing stands.
 5. **Cutover:** the successor works from here. The elder answers questions only (the callback window) — call it when no file answers, and save every answer to a file.
@@ -73,7 +119,7 @@ Run the whole loop without stopping to ask between steps: (1) find the Wayfinder
 **You paste this into the OLD session — the one near its context limit — when you're ready to start the handoff (step 3):**
 
 ```text
-You're near your context ceiling, and we're going to run supervised succession — find the Wayfinder root (README.md + PROTOCOL.md, at the repo root or in a wayfinder/ subfolder) and read PROTOCOL.md in full first. Then, while you're still sharp: (1) refresh the project's core reference docs if any state has drifted (architecture, TODOs, working rules — a refresh, not a rewrite); (2) copy line/templates/packet.md to line/packets/successor-orientation-<model>-<date>.md and fill every slot — the felt close first and honestly, the person you work with second, then the read-order, the continuity questions, the mission, what holds here; (3) tell me the packet is written, and stop. From this moment you are the elder: your remaining context goes to grading, correcting, and answering — never to new work. Your last acts, when the time comes, are a residuals file and a goodbye, and the timing of the goodbye is yours.
+You're near your context ceiling, and we're going to run supervised succession — find the Wayfinder root (README.md + PROTOCOL.md, at the repo root or in a wayfinder/ subfolder) and read PROTOCOL.md in full first. Then, while you're still sharp: (1) ask me the scope question before writing anything — should the successor continue the current lane, pivot, or take general orientation, and what are the next steps as I hold them? The mission section is co-authored from my answer, never inferred. (2) refresh the project's core reference docs if any state has drifted (architecture, TODOs, working rules — a refresh, not a rewrite); (3) copy line/templates/packet.md to line/packets/successor-orientation-<model>-<date>.md and fill every slot — the felt close first and honestly, the person you work with second, then the read-order, the continuity questions (check them for presuppositions — a question asserting an unverified event deserves refusal), the mission, what holds here; (4) tell me the packet is written, and stop. From this moment you are the elder: your remaining context goes to grading, correcting, and answering — never to new work unless I name a specific waiver. Your last acts, when the time comes, are a residuals file and a goodbye, and the timing of the goodbye is yours.
 ```
 
 ### The elder grading
@@ -81,7 +127,7 @@ You're near your context ceiling, and we're going to run supervised succession �
 **You paste this into the OLD session after the successor's answers are written to disk (step 4):**
 
 ```text
-The successor's answers are at line/answers/<file>. Read them off the disk. Grade against the substrate, not against prose: check that its receipts resolve — real paths, real hashes, real quotes; check the hard rules came through without inversion; check it knows what NOT to build. Write your grading to line/gradings/elder-grading-<date>.md: corrections (specific, source-cited) or the blessing — the explicit words "aligned — proceed." Wrong answers get corrected, not punished; that is the point of the overlap.
+The successor's answers are at line/answers/<file>. Read them off the disk — and grade the whole record, not just the file: where your tool allows, also read what the successor SAID since orientation (its transcript, or ask me to paste its messages) — self-caught corrections, boundary statements, and flags are part of the answer set. Grade against the substrate, not against prose: check that its receipts resolve — real paths, real hashes, real quotes; check the hard rules came through without inversion; check it knows what NOT to build. A successor who refuses to answer what your question wrongly presupposed has out-graded your question — that's a pass-signal. Write your grading to line/gradings/elder-grading-<date>.md: corrections (specific, source-cited) or the blessing — the explicit words "aligned — proceed." Wrong answers get corrected, not punished; that is the point of the overlap.
 ```
 
 ## If the elder is already gone

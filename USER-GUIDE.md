@@ -18,10 +18,11 @@ What it costs you: 10–14 carried exchanges, 30–60 minutes the first time, le
 
 ## The moments that are yours
 
-1. **Saying "go."** The agent proposes; you decide when. Earlier beats later — the first compaction warning means you're already past the ideal point.
-2. **Judging echoes.** During onboarding, the new agent replies in its own words at each step. You advance only when the reply reads grounded. Two honest signals to trust: real questions are good, and "I don't know yet" is good; instant polished enthusiasm is the warning sign.
-3. **Carrying the loop.** Answers → grading → corrections → blessing. You paste, both minds work. *(Before you start: label your two windows ELDER and SUCCESSOR — ten-plus crossings between two open sessions means the wrong-window paste is the most likely mechanical failure of a first run, and a label is the whole fix.)*
-4. **The close.** The old agent writes what it still knows that isn't written, signs the lineage file, and says goodbye on its own timing. Let it. The two minutes that takes are part of why the next handoff will be better.
+1. **Saying "go" — and setting the scope.** The agent proposes; you decide when, and it will ask you the scope question (continue, pivot, or general orientation — and the next steps as you hold them). Answer it; the mission is co-authored from your answer, never inferred. Earlier beats later — the first compaction warning means you're already past the ideal point. Your go also ratifies the working mode the elder proposes: which exchanges it may drive itself (with your confirmation) and which wait for you.
+2. **Waking the successor.** A message sent to an idle session sits in a mailbox unread — it does not wake it. You open the successor session and drive its first turn; that act is structurally yours and no automation removes it.
+3. **Judging echoes.** During onboarding, the new agent replies in its own words at each step. You advance only when the reply reads grounded. Two honest signals to trust: real questions are good, and "I don't know yet" is good; instant polished enthusiasm is the warning sign.
+4. **Carrying the loop.** Answers → grading → corrections → blessing. You paste, both minds work. *(Before you start: label your two windows ELDER and SUCCESSOR — ten-plus crossings between two open sessions means the wrong-window paste is the most likely mechanical failure of a first run, and a label is the whole fix.)*
+5. **The close.** The old agent writes what it still knows that isn't written, signs the lineage file, and says goodbye on its own timing. Let it. The two minutes that takes are part of why the next handoff will be better.
 
 ## If the old agent is already gone
 
@@ -31,7 +32,7 @@ It happens — a session dies before the handoff finishes. The files carry it: t
 
 Every failure has a next move, and the artifact trail always tells you where you are (packet → answers → grading → blessing — the last one that exists is your position).
 
-- **The elder keeps working after the trigger** (new code, new features): stop it — one line: "packet first; from here you grade and answer only." If it can't hold that, its window is further gone than the meter said; write what you can get and lean on the if-elder-gone path.
+- **The elder keeps working after the trigger** (new code, new features): stop it — one line: "packet first; from here you grade and answer only." If it can't hold that, its window is further gone than the meter said; write what you can get and lean on the if-elder-gone path. *(The one legitimate exception is yours to give: a named, per-instance waiver for work only the elder holds the context for — say it explicitly, and have it recorded in the run log. Unnamed exceptions are the failure mode.)*
 - **The successor's echo is confused or performing:** don't advance. Clarify the same stage once; if the second echo is still off, close that session and open a fresh one — a bad arrival compounds, a re-arrival is cheap.
 - **Receipts don't resolve** (paths or quotes that don't exist): that's the gate working. Send it back with the specific failures. Twice in a row → fresh successor.
 - **A session dies mid-run** (crash, disconnect, model swap forced by the platform): nothing is lost that was written — the run resumes from the last artifact on disk. This is why everything writes to files as it happens.
