@@ -196,7 +196,7 @@ The name is given, not demanded — when the incoming instance has enough contex
 
 Two mechanics the first live runs proved essential, so they're doctrine:
 
-**Oversight runs through the substrate.** An elder (or any supervising session) watches the successor's work where it lands: the artifact trail in `line/` — the last artifact that exists is always the successor's true position. On Claude Code there's a stronger instrument: every session's transcript is a local file (`~/.claude/projects/<project-slug>/<session-id>.jsonl`) — another session can READ it live. Read-only oversight, zero crossings: watching the substrate is reading; only messages are crossings, and only the human clocks those. When an elder launches a successor, arranging its own oversight (watch `line/`, or the transcript where available) is part of the launch, not an optional extra.
+**Oversight runs through the substrate.** An elder (or any supervising session) watches the successor's work where it lands: the artifact trail in `line/` — the last artifact that exists is always the successor's true position. On Claude Code there's a stronger instrument: every session's transcript is a local file (`~/.claude/projects/<project-slug>/<session-id>.jsonl`) — another session can READ it live. Read-only oversight, zero crossings: watching the substrate is reading; only messages are crossings, and only the human clocks those. When an elder launches a successor, arranging its own oversight (watch `line/`, or the transcript where available) is part of the launch, not an optional extra. **And oversight must be SCHEDULED, not announced (field finding, 2026-07-07 evening):** an agent that ends its turn is asleep — every elder before the finding announced "I'm watching" and then waited for the human, which cuts the chain. Where self-scheduling exists, the elder books its next check before ending any overlap turn; where it doesn't, the elder states its cadence so the gap is the human's knowingly. **The chain is proven, not presumed: the successor's first post-blessing act is an ACK back through the channel** — the first live run of both rules is logged in the origin repo (run 3, 2026-07-07).
 
 **The held-directly rule (field finding, 2026-07-07).** Whoever grades, audits, or gap-analyzes holds the primary texts directly — packets, answers, protocols, shipped framings are never read *for* you by an agent. Agents may fetch satellite receipts (the quotes out of a five-megabyte transcript); the synthesis is done by the mind holding the primaries. Partial-context delegation is how audits fail politely — the same way handoffs do. (The human's raw words, with the decode marked as a decode: *"the ship framings themselves and must hold these directly, not through an agent."*)
 
@@ -235,10 +235,10 @@ USER-GUIDE.md                ← succession from the human's seat
 lineage.md                   ← the Line (the second door)
 line/
   INDEX.md                   ← one line per succession run
-  sessions/                  ← one crystallization per session close (what happened · what mattered · what's open)
+  sessions/                  ← one crystallization per session close, from templates/session-close.md (felt close · decisions · stances · open threads)
   packets/  answers/  gradings/  runs/
   scratchpads/               ← <class>-scratchpad.md, one per model class
-  templates/                 ← packet · scratchpad · run-log · packet-example
+  templates/                 ← packet · scratchpad · run-log · session-close · packet-example
 adapters/                    ← per-environment delivery
 evidence/                    ← the paper + live run logs
 LICENSE · LICENSE-FAQ.md     ← the terms, and the terms in plain English
@@ -272,7 +272,7 @@ Earned empirically; hold them whole:
 
 ## Maintenance
 
-**Every substantive session close runs the boundary pass — two motions: add, then tidy.** *Add:* write the session's crystallization to `line/sessions/`. *Tidy:* re-derive the living surfaces — current-state docs, the INDEX, any board — done to the done-log, stale flagged, active carried. **Derived views are re-derived, never appended.** The append-only palimpsest is how handoff files die. **And done migrates split, never absorbed (field finding, 2026-07-07):** an item carrying a gate or sub-part never moves to the done-log whole — the finished part migrates, the open gate is carried visibly and linked from the entry; anything that can't be receipt-checked migrates as flagged-unknown, never as done. The scar: a build went public while its sign-off gate silently vanished into "done." *(Threshold, so the ceremony stays honest: substantive sessions crystallize; a trivial one — a five-minute typo fix — skips the crystallization rather than diluting the archive with noise.)*
+**Every substantive session close runs the boundary pass — two motions: add, then tidy.** *Add:* write the session's crystallization to `line/sessions/` from `line/templates/session-close.md` — felt close first, stances included, lean under the same gate that binds packets (right detail, not all detail). *Tidy:* re-derive the living surfaces — current-state docs, the INDEX, any board — done to the done-log, stale flagged, active carried. **Derived views are re-derived, never appended.** The append-only palimpsest is how handoff files die. **And done migrates split, never absorbed (field finding, 2026-07-07):** an item carrying a gate or sub-part never moves to the done-log whole — the finished part migrates, the open gate is carried visibly and linked from the entry; anything that can't be receipt-checked migrates as flagged-unknown, never as done. The scar: a build went public while its sign-off gate silently vanished into "done." *(Threshold, so the ceremony stays honest: substantive sessions crystallize; a trivial one — a five-minute typo fix — skips the crystallization rather than diluting the archive with noise.)*
 
 **When a successor becomes the elder, it refreshes the golden substrate before writing its packet** — a refresh, not a rewrite; that's what makes the project's self-model gain resolution across agents instead of drifting.
 
