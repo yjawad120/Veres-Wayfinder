@@ -55,8 +55,8 @@ config:
 ---
 sequenceDiagram
     autonumber
-    participant Elder
-    participant Successor
+    participant Elder as Elder — near its ceiling
+    participant Successor as Successor — new LLM, unaligned
     rect rgba(110, 118, 129, 0.12)
     Note over Elder,Successor: THE HANDOFF
     Elder->>Successor: the packet — the work, distilled while sharp
@@ -75,10 +75,11 @@ sequenceDiagram
     Successor->>Elder: a question no file answers
     Elder->>Successor: the answer, saved to a file
     end
-    Note over Elder,Successor: the elder closes — residuals, the Line, goodbye
+    Note over Elder: closes — residuals, the Line, goodbye
+    Note over Successor: fully aligned — carries the context forward
 ```
 
-*You carry every arrow — that's the "supervised," and it's the design, not overhead. Beneath the exchange sits `line/`: the arc of crystallizations both minds read. The packet is the door; the arc is the house.*
+*The loop runs itself — the `wayfinder` skill drives the crossings and the checks; you oversee the gates, and nothing cuts over without the blessing. Beneath the exchange sits `line/`: the arc of crystallizations both minds read. The packet is the door; the arc is the house.*
 
 ## Cost is the hook. Alignment is the moat.
 
