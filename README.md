@@ -78,9 +78,7 @@ sequenceDiagram
     Note over Elder,Successor: the elder closes — residuals, the Line, goodbye
 ```
 
-*You carry every arrow — that's the "supervised." Beneath the exchange sits `line/`: the arc of crystallizations both minds read. The packet is the door; the arc is the house.*
-
-You carry every crossing by hand — that's the "supervised," and it's the design, not overhead.
+*You carry every arrow — that's the "supervised," and it's the design, not overhead. Beneath the exchange sits `line/`: the arc of crystallizations both minds read. The packet is the door; the arc is the house.*
 
 ## Cost is the hook. Alignment is the moat.
 
