@@ -1,17 +1,12 @@
 # Wayfinder — by [Veres Labs](https://veres.global)
 
-**Your agent survives its own context window.** The transcript keeps the words. The understanding is what dies — and what Wayfinder keeps.
+**Wayfinder gives your AI projects a memory that outlives every session.** Plain files, for Claude Code and any agent that reads files. Your agent's understanding no longer dies with its context window.
 
-Every long-running AI agent session ends the same way: the context fills, and everything the agent understood — the decisions, the constraints, the way it worked with you — dies with it. Tomorrow's session re-reads the code, re-asks your preferences, re-learns the rules the hard way — and still starts dumber about your project than the one you just lost.
+**Why this works — the whole idea in four sentences.** An agent's understanding of your project dies when its context fills; the transcript survives, but a transcript is words — replaying it doesn't bring the judgment back. So Wayfinder has the agent itself distill what mattered — the decisions and their reasons, the learned rules, its read of *you* — **while it's still sharp**, instead of letting a degraded mind compress it at the cliff. And because a handoff you never test is a handoff you're trusting blind, the next session **answers questions on it, with receipts, and nothing cuts over until the author grades it aligned**. The result is the only thing that matters: **every session starts where the last one actually left off — your project gets smarter over time instead of resetting every morning.**
 
-**What Wayfinder actually is:** files and a ritual — markdown in your repo, versioned by git. No server, no API, no accounts. Two moves:
-
-1. **As your agents work, they write things down properly.** Not logs — **crystallizations**: short distillations of what happened and why it mattered, the way a good engineer briefs a colleague. These accumulate into your project's **golden context**: the current model of the work, the decisions with their reasons, the rules learned the hard way. Every new session loads it and arrives oriented instead of starting over.
-2. **When an agent nears its context limit, the handoff is *checked*.** The outgoing agent writes its handoff while still sharp; the incoming one answers questions on it, with receipts; the author grades those answers — and nothing cuts over until the grade says *aligned*. Teach, test, grade, approve — with you supervising every step.
-
-*Came for the cost cut? Routing work to cheaper models is here too — with the step everyone skips: the cheap model is **checked before it writes**. [Jump to it.](#cost-is-the-hook-alignment-is-the-moat)*
-
-> *Wayfinders mark the trail as they walk it — each crystallization a stone — so the next one crosses by the marks, not by luck. That's the name, and the whole method.*
+Two practices, one substrate:
+- **[Supervised succession](#how-it-works--three-moves)** — the checked handoff at the context ceiling: teach → test → grade → approve, with you carrying every crossing.
+- **[Wayfinder Delegate](#cost-is-the-hook-alignment-is-the-moat)** — the same checking applied to model routing: plan with a frontier model, execute with a cheap one, and the cheap one **plays the plan back before it writes**. Routing can cut cost by roughly two-thirds; the checking is what routing alone never gives you.
 
 ## ⚡ Get started — one paste, right now
 
@@ -22,6 +17,8 @@ Set up Wayfinder in this project. This message authorizes the complete setup. (1
 ```
 
 That's the whole install — reversible, touches none of your documents, and your agent briefs you at the end. Feel it out; the ritual proposes itself when it's needed. *(Other tools, exact-control setup, and the step-by-step: [Quickstart](#quickstart) below.)*
+
+> *Wayfinders mark the trail as they walk it — each crystallization a stone — so the next one crosses by the marks, not by luck. That's the name, and the whole method.*
 
 This README is the five-minute version — you can run a succession today from this page alone. The full protocol (roles, transports, artifacts, the onboarding ramp, the callback window) is in **[PROTOCOL.md](PROTOCOL.md)**; what it looks like from your seat, in **[USER-GUIDE.md](USER-GUIDE.md)**.
 
