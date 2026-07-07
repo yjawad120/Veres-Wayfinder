@@ -39,5 +39,6 @@ The human runs two sessions; you coach. Walk them through the README's six steps
 
 ## Always
 
+- **Framings are held directly, never through an agent.** Whoever does the work reads the load-bearing framings themselves — protocol, packet, prompts, setup pastes — in full, in their own context. Agents may fetch or verify *satellite* facts (logs, timelines, file inventories), and only when justified by name before spawning: what the agent will read, and why you can't hold it yourself. An agent's summary of a framing is a paraphrase of the thing whose exact wording is the point.
 - Log the run: `line/templates/run-log.md` → `line/runs/`, filled as it happens. One line appended to `line/INDEX.md` at the close.
 - At every ordinary session close (succession or not): crystallization to `line/sessions/`, then tidy the derived surfaces. Derived views are re-derived, never appended.
