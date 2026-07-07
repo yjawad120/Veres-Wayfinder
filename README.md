@@ -60,7 +60,7 @@ sequenceDiagram
         Successor-->>Elder: a question no file answers
         Elder-->>Successor: the answer, saved to a file
     end
-    Note over Elder: residuals, lineage signature, goodbye
+    Note over Elder,Successor: the elder closes — residuals, the Line, goodbye
 ```
 
 *You carry every arrow — that's the "supervised." Beneath the exchange sits `line/`: the arc of crystallizations both minds read. The packet is the door; the arc is the house.*
