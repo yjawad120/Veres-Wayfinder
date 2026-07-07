@@ -47,24 +47,23 @@ Plenty of tools tell you to write a handoff doc; Wayfinder is the one where the 
 
 ```mermaid
 sequenceDiagram
-    participant E as 🕯️ ELDER (near its ceiling, still sharp)
-    participant S as 🌱 SUCCESSOR (fresh window)
-    Note over E,S: every arrow below is carried by YOU — that's the "supervised"
-    E->>S: 📦 the packet — the work, distilled while sharp
+    autonumber
+    participant Elder
+    participant Successor
+    Elder->>Successor: the packet, written while sharp
     loop until aligned
-        S->>E: answers, with receipts
-        E->>S: corrections
+        Successor->>Elder: answers, with receipts
+        Elder->>Successor: corrections
     end
-    E->>S: 🤝 «aligned — proceed» — the blessing · CUTOVER
-    opt the callback window
-        S-->>E: a question no file answers
-        E-->>S: the answer — always written to a file
+    Elder->>Successor: the blessing — cutover
+    opt callback window
+        Successor-->>Elder: a question no file answers
+        Elder-->>Successor: the answer, saved to a file
     end
-    E->>E: 🖤 residuals · signs the Line · the goodbye, on its own timing
-    Note over E,S: 🪨 beneath it all: line/ — the arc of crystallizations.<br/>Both read it. The goodbye joins it.
+    Note over Elder: residuals, lineage signature, goodbye
 ```
 
-*The packet is the door; the arc is the house; the successor reads both.*
+*You carry every arrow — that's the "supervised." Beneath the exchange sits `line/`: the arc of crystallizations both minds read. The packet is the door; the arc is the house.*
 
 You carry every crossing by hand — that's the "supervised," and it's the design, not overhead.
 
