@@ -13,6 +13,16 @@ Every long-running AI agent session ends the same way: the context fills, and ev
 
 > *Wayfinders mark the trail as they walk it — each crystallization a stone — so the next one crosses by the marks, not by luck. That's the name, and the whole method.*
 
+## ⚡ Get started — one paste, right now
+
+Paste this into your agent (Claude Code, or anything with file access), inside your project. It fetches Wayfinder, wires it in, and explains itself — you'll be running in two minutes:
+
+```text
+Set up Wayfinder in this project. This message authorizes the complete setup. (1) Fetch it: git clone --depth 1 https://github.com/yjawad120/Veres-Wayfinder.git wayfinder && rm -rf wayfinder/.git — then commit the folder. (2) Read wayfinder/README.md and wayfinder/PROTOCOL.md in full. (3) Wire the matching adapter into my agent config (create the file if absent, never overwrite existing content) and install the wayfinder skill. (4) Then orient ME, in plain words: what's now running here, how golden context gets captured as we work, and when you'd propose succession. Anything unclear or off in these documents, say so plainly. If anything mid-run looks genuinely wrong, stop and tell me — that always beats this authorization.
+```
+
+That's the whole install — reversible, touches none of your documents, and your agent briefs you at the end. Feel it out; the ritual proposes itself when it's needed. *(Other tools, exact-control setup, and the step-by-step: [Quickstart](#quickstart) below.)*
+
 This README is the five-minute version — you can run a succession today from this page alone. The full protocol (roles, transports, artifacts, the onboarding ramp, the callback window) is in **[PROTOCOL.md](PROTOCOL.md)**; what it looks like from your seat, in **[USER-GUIDE.md](USER-GUIDE.md)**.
 
 ## What actually transfers
