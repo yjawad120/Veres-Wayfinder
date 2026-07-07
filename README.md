@@ -1,14 +1,17 @@
 # Wayfinder — by [Veres Labs](https://veres.global)
 
-*Wayfinders mark the trail as they walk it — each crystallization a stone — so the next one crosses by the marks, not by luck.*
-
 **Your agent survives its own context window.** The transcript keeps the words. The understanding is what dies — and what Wayfinder keeps.
+
+Every long-running AI agent session ends the same way: the context fills, and everything the agent understood — the decisions, the constraints, the way it worked with you — dies with it. Tomorrow's session re-reads the code, re-asks your preferences, re-learns the rules the hard way — and still starts dumber about your project than the one you just lost.
+
+**What Wayfinder actually is:** files and a ritual — markdown in your repo, versioned by git. No server, no API, no accounts. Two moves:
+
+1. **As your agents work, they write things down properly.** Not logs — **crystallizations**: short distillations of what happened and why it mattered, the way a good engineer briefs a colleague. These accumulate into your project's **golden context**: the current model of the work, the decisions with their reasons, the rules learned the hard way. Every new session loads it and arrives oriented instead of starting over.
+2. **When an agent nears its context limit, the handoff is *checked*.** The outgoing agent writes its handoff while still sharp; the incoming one answers questions on it, with receipts; the author grades those answers — and nothing cuts over until the grade says *aligned*. Teach, test, grade, approve — with you supervising every step.
 
 *Came for the cost cut? Routing work to cheaper models is here too — with the step everyone skips: the cheap model is **checked before it writes**. [Jump to it.](#cost-is-the-hook-alignment-is-the-moat)*
 
-Every long-running AI agent session ends the same way: the context fills, and everything the agent understood — decisions, constraints, the way it worked with you — dies with it.
-
-Day to day, your agents create and maintain crystallized models of your project — **golden context**: small ledgers (session crystallizations, living reference docs, class scratchpads) that every session loads to arrive oriented and stay aligned. At the ceiling, **agent-to-agent supervised succession**: before an agent runs out, it opens a successor, teaches it, grades its understanding, blesses it, and stays available for questions until the window closes — a handoff you can audit, every artifact versioned in git, every crossing carried by a human.
+> *Wayfinders mark the trail as they walk it — each crystallization a stone — so the next one crosses by the marks, not by luck. That's the name, and the whole method.*
 
 This README is the five-minute version — you can run a succession today from this page alone. The full protocol (roles, transports, artifacts, the onboarding ramp, the callback window) is in **[PROTOCOL.md](PROTOCOL.md)**; what it looks like from your seat, in **[USER-GUIDE.md](USER-GUIDE.md)**.
 
