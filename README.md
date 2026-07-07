@@ -46,19 +46,34 @@ Plenty of tools tell you to write a handoff doc; Wayfinder is the one where the 
 3. **Cutover on the blessing:** the successor takes over; the elder stays callable for questions until its window truly ends, writes down what it still knows that isn't written, signs the lineage file, and says goodbye.
 
 ```mermaid
+---
+config:
+  sequence:
+    mirrorActors: false
+    actorMargin: 280
+    messageMargin: 40
+---
 sequenceDiagram
     autonumber
     participant Elder
     participant Successor
-    Elder->>Successor: the packet, written while sharp
-    loop until aligned
-        Successor->>Elder: answers, with receipts
-        Elder->>Successor: corrections
+    rect rgba(110, 118, 129, 0.12)
+    Note over Elder,Successor: THE HANDOFF
+    Elder->>Successor: the packet — the work, distilled while sharp
     end
-    Elder->>Successor: the blessing — cutover
-    opt callback window
-        Successor-->>Elder: a question no file answers
-        Elder-->>Successor: the answer, saved to a file
+    rect rgba(87, 171, 90, 0.10)
+    Note over Elder,Successor: THE CHECK — repeats until aligned
+    Successor->>Elder: answers, with receipts
+    Elder->>Successor: corrections
+    end
+    rect rgba(198, 144, 38, 0.12)
+    Note over Elder,Successor: CUTOVER
+    Elder->>Successor: the blessing — the work is now the successor's
+    end
+    rect rgba(110, 118, 129, 0.12)
+    Note over Elder,Successor: CALLBACK WINDOW — optional, while the elder remains
+    Successor->>Elder: a question no file answers
+    Elder->>Successor: the answer, saved to a file
     end
     Note over Elder,Successor: the elder closes — residuals, the Line, goodbye
 ```
