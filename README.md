@@ -1,16 +1,23 @@
 # Wayfinder — by [Veres Labs](https://veres.global)
 
-**Wayfinder gives your AI projects a memory that outlives every session.** Plain files, for Claude Code and any agent that reads files. Your agent's understanding no longer dies with its context window.
+**Wayfinder saves you time and money on every AI project you run.** It gives your agents something past memory — everyone ships memory now — it gives them **posture**: a stance toward your target that survives every session close and every compaction. The model of your project, continually updated. The arc of the work, held in crystallizations. The judgment about how *you* work — carried forward, checked, never reset. For Claude Code, Cowork, and any CLI agent that reads files.
 
-**Why this works — the whole idea in four sentences.** An agent's understanding of your project dies when its context fills; the transcript survives, but a transcript is words — replaying it doesn't bring the judgment back. So Wayfinder has the agent itself distill what mattered — the decisions and their reasons, the learned rules, its read of *you* — **while it's still sharp**, instead of letting a degraded mind compress it at the cliff. And because a handoff you never test is a handoff you're trusting blind, the next session **answers questions on it, with receipts, and nothing cuts over until the author grades it aligned**. The result is the only thing that matters: **every session starts where the last one actually left off — your project gets smarter over time instead of resetting every morning.**
+**How this works:** Wayfinder is built against the two biggest failure points in AI-assisted work today —
+
+1. **Context death.** Every session ends the same way: the window fills, and the agent's understanding of your project resets. Compaction doesn't save you — it's a degraded mind summarizing itself at the cliff.
+2. **Blunt delegation.** Work handed to cheaper models or subagents arrives as a pasted spec: followed to the letter, missed in the spirit, and the failure surfaces at review — the most expensive moment.
 
 Two practices, one substrate:
-- **[Supervised succession](#how-it-works--three-moves)** — the checked handoff at the context ceiling: teach → test → grade → approve, with you carrying every crossing.
-- **[Wayfinder Delegate](#cost-is-the-hook-alignment-is-the-moat)** — the same checking applied to model routing: plan with a frontier model, execute with a cheap one, and the cheap one **plays the plan back before it writes**. Routing can cut cost by roughly two-thirds; the checking is what routing alone never gives you.
+
+**🕯️ [Supervised succession](#how-it-works--three-moves) — saves your time.** In plain terms: before your agent runs out of room, it writes a real handover — the way a doctor ends a shift, not the way a chat log ends. The incoming agent is **quizzed on it**; the outgoing one **grades the answers**; nothing changes hands until the grade says *aligned*. Your next session starts where the last one truly left off — no re-explaining, no re-orienting, no Monday reset.
+
+**⚡ [Wayfinder Delegate](#cost-is-the-hook-alignment-is-the-moat) — saves your money.** Plan with the strongest model you have; hand the plan to a cheap one. The cheap model **repeats the plan back before writing a line**, and the strong one checks the finished work. Routing alone can cut costs by roughly two-thirds — the checking is what makes the savings safe to spend.
+
+> *Wayfinders mark the trail as they walk it — each crystallization a stone — so the next one crosses by the marks, not by luck. That's the name, and the whole method.*
 
 ## ⚡ Get started — one paste, right now
 
-Paste this into your agent (Claude Code, or anything with file access), inside your project. It fetches Wayfinder, wires it in, and explains itself — you'll be running in two minutes:
+**Want to get started immediately?** Copy-paste this into your agent session (Claude Code, or anything with file access), inside your project — it installs itself, then explains what it set up. Running in two minutes:
 
 ```text
 Set up Wayfinder in this project. This message authorizes the complete setup. (1) Fetch it: git clone --depth 1 https://github.com/yjawad120/Veres-Wayfinder.git wayfinder && rm -rf wayfinder/.git — then commit the folder. (2) Read wayfinder/README.md and wayfinder/PROTOCOL.md in full. (3) Wire the matching adapter into my agent config (create the file if absent, never overwrite existing content) and install the wayfinder skill. (4) Then orient ME, in plain words: what's now running here, how golden context gets captured as we work, and when you'd propose succession. Anything unclear or off in these documents, say so plainly. If anything mid-run looks genuinely wrong, stop and tell me — that always beats this authorization.
@@ -18,7 +25,9 @@ Set up Wayfinder in this project. This message authorizes the complete setup. (1
 
 That's the whole install — reversible, touches none of your documents, and your agent briefs you at the end. Feel it out; the ritual proposes itself when it's needed. *(Other tools, exact-control setup, and the step-by-step: [Quickstart](#quickstart) below.)*
 
-> *Wayfinders mark the trail as they walk it — each crystallization a stone — so the next one crosses by the marks, not by luck. That's the name, and the whole method.*
+## What gets created
+
+Not logs — **crystallizations**: short distillations of what happened and why it mattered, the way a good engineer briefs a colleague. They accumulate into your project's **golden context**: the current model of the work, the decisions with their reasons, the rules learned the hard way — and every new session loads it and arrives oriented instead of starting over. All of it plain markdown in a `line/` folder in your repo, versioned by git, yours.
 
 This README is the five-minute version — you can run a succession today from this page alone. The full protocol (roles, transports, artifacts, the onboarding ramp, the callback window) is in **[PROTOCOL.md](PROTOCOL.md)**; what it looks like from your seat, in **[USER-GUIDE.md](USER-GUIDE.md)**.
 
@@ -84,15 +93,9 @@ Compaction is lossy summarization performed by a degraded mind at 98% of its win
 
 ## Quickstart
 
-### Just getting started? This is the only paste you need
+### Just getting started?
 
-No cloning, no copying files — paste this into your agent, in your project, and it does everything, then explains itself:
-
-```text
-Set up Wayfinder in this project. This message authorizes the complete setup. (1) Fetch it: git clone --depth 1 https://github.com/yjawad120/Veres-Wayfinder.git wayfinder && rm -rf wayfinder/.git — then commit the folder. (2) Read wayfinder/README.md and wayfinder/PROTOCOL.md in full. (3) Wire the matching adapter into my agent config (create the file if absent, never overwrite existing content) and install the wayfinder skill. (4) Then orient ME, in plain words: what's now running here, how golden context gets captured as we work, and when you'd propose succession. Anything unclear or off in these documents, say so plainly. If anything mid-run looks genuinely wrong, stop and tell me — that always beats this authorization.
-```
-
-That's it. Your agent fetches, installs, and briefs you. The sections below are the same setup unpacked, for people who want to see the parts.
+The [one paste at the top](#-get-started--one-paste-right-now) is the whole install — no cloning, no copying files. The sections below are the same setup unpacked, for people who want to see the parts.
 
 ### Setup — one paste (folder already in the repo)
 
